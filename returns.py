@@ -104,24 +104,3 @@ def _check_prices(prices: pd.Series) -> None:
             f"Only {len(prices)} price observations. "
             f"VaR and volatility estimates will be unreliable."
         )
-
-
-# 1. Load prices (from your loader module)
-prices = load_price_data("XLE", start="2023-01-01", end="2023-03-01")
-prices = clean_prices(prices)
-
-# 2. Compute returns
-simple_ret = simple_returns(prices)
-log_ret = log_returns(prices)
-excess_ret = excess_returns(simple_ret, risk_free_rate_annual=0.05)
-
-# 3. Summarize returns
-summary = return_summary(simple_ret)
-print(summary)
-
-# 4. Find worst days
-worst = worst_days(simple_ret, n=5)
-print(worst)
-
-# 5. Check for gaps in price data
-gaps = detect_return_gaps(prices, threshold_days=5)

@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 from typing import Optional
-import loader
-import returns
+from loader import *
+from returns import *
 
 TRADING_DAYS_PER_YEAR = 252   # market standard
 EWMA_LAMBDA = 0.94            # RiskMetrics standard for daily data

@@ -151,7 +151,3 @@ def clean_prices(prices: pd.Series) -> pd.Series:
  
     return prices
  
-
-xle = load_price_data("XLE", start="2025-12-01", end="2026-03-21")
-xle_clean = clean_prices(xle)
-print(xle_clean)
