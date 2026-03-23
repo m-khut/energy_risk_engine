@@ -150,4 +150,3 @@ def clean_prices(prices: pd.Series) -> pd.Series:
         print(f"[clean] Filled {n_before} NaN values. Remaining: {n_after}.")
  
     return prices
- 
