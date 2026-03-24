@@ -6,12 +6,12 @@ VaR · CVaR · EWMA Volatility · Drawdown · Diagnostics ·
 Kupiec Backtest · Correlation · CLI Report Generator
 
 **Sequence:**
-  loader
-  returns
-  volatility
-  VaR
-  drawdown
-  .
-  .
-  .
-  .
+  - loader
+  - returns
+  - volatility
+  - VaR
+  - drawdown
+   .
+   .
+   .
+   .
