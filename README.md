@@ -27,7 +27,6 @@ energy-risk-engine/
 ├── [[risk_nerrative.py]]  # interview walkthrough notebook
 ├── outputs/figures/       # publication-quality plots
 ├── [[Mode Risk Memo]]     # model validation memo (SR 11-7 format)
-└── [[requirements.txt]]
 ```
 
 ## How to Run
@@ -44,3 +43,15 @@ python reports/generate_report.py --ticker CL=F --start 2015-01-01 --save
 
 # Run the narrative notebook (Jupyter or as script)
 python notebooks/risk_narrative.py
+```
+
+## Requirements
+yfinance>=0.2.28
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+scikit-learn>=1.1.0
+
+
