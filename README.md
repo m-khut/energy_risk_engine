@@ -15,22 +15,18 @@ Methodology
 ## Project Structure
 ```
 energy-risk-engine/
-├── data/
-│   └── [[loader.py]]          # yfinance pull, validation, cleaning
-├── risk/
-│   ├── [[returns.py]]         # log/simple returns, diagnostics
-│   ├── [[volatility.py]]      # rolling, EWMA, regime summary
-│   ├── [[var.py]]             # Historical + Parametric VaR, CVaR, Kupiec
-│   ├── [[drawdown.py]]        # max drawdown, periods, Calmar
-│   ├── [[diagnostics.py]]     # Jarque-Bera, kurtosis, fat tail tests
-│   └── [[correlation.py]]     # rolling corr, crisis breakdown
-├── reports/
-│   ├── [[generate_report.py]] # CLI risk report generator
-│   └── output/            # generated reports
-├── notebooks/
-│   └── [[risk_nerrative.py]]  # interview walkthrough notebook
+├── [[loader.py]]          # yfinance pull, validation, cleaning
+├── [[returns.py]]         # log/simple returns, diagnostics
+├── [[volatility.py]]      # rolling, EWMA, regime summary
+├── [[var.py]]             # Historical + Parametric VaR, CVaR, Kupiec
+├── [[drawdown.py]]        # max drawdown, periods, Calmar
+├── [[diagnostics.py]]     # Jarque-Bera, kurtosis, fat tail tests
+├── [[correlation.py]]     # rolling corr, crisis breakdown
+├── [[generate_report.py]] # CLI risk report generator
+    └── output/            # generated reports
+├── [[risk_nerrative.py]]  # interview walkthrough notebook
 ├── outputs/figures/       # publication-quality plots
-├── [[Mode Risk Memo]]          # model validation memo (SR 11-7 format)
+├── [[Mode Risk Memo]]     # model validation memo (SR 11-7 format)
 └── [[requirements.txt]]
 ```
 
