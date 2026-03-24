@@ -1,0 +1,108 @@
+=================================================================
+  ENERGY RISK ENGINE - MARKET RISK REPORT
+=================================================================
+  Ticker    : SPY
+  Start     : 2015-01-01
+  End       : 2026-03-24
+  Generated : 2026-03-24
+=================================================================
+
+  Observations: 2821 trading days
+  Price range : $154.56 - $693.60
+
+-----------------------------------------------------------------
+  [1] RETURN STATISTICS
+-----------------------------------------------------------------
+  Mean daily return   : 0.0478%
+  Daily volatility    : 1.1175%
+  Annualized return   : 12.05%
+  Annualized vol      : 17.74%
+  Sharpe ratio        : 0.679  (rf = 0)
+  Skewness            : -0.5795
+  Excess kurtosis     : 14.5854  (0 = normal)
+
+-----------------------------------------------------------------
+  [2] VALUE AT RISK (VaR) AND EXPECTED SHORTFALL (CVaR)
+-----------------------------------------------------------------
+  Historical VaR  95% : -1.6815% per day
+  Historical VaR  99% : -3.2468% per day
+  Parametric VaR  95% : -1.7904% per day
+  Historical CVaR 95% : -2.7510% per day
+  Historical CVaR 99% : -4.7600% per day
+
+  Fat-tail gap (hist - param @ 95%): 0.1089%
+  Interpretation: Tails close to Gaussian.
+
+-----------------------------------------------------------------
+  [3] VAR BACKTEST (KUPIEC TEST, 95%)
+-----------------------------------------------------------------
+  Expected breach rate : 5.0%
+  Observed breach rate : 5.0%
+  Breach count         : 141 / 2821 days
+  LR statistic         : 0.0000
+  p-value              : 0.9966
+  Result               : PASS: Model not rejected. Observed 141 breaches (5.0%) consistent with 5.0% expected.
+
+-----------------------------------------------------------------
+  [4] VOLATILITY ANALYSIS
+-----------------------------------------------------------------
+  Current 21d rolling vol : 13.38% (annualized)
+  Current 63d rolling vol : 11.97% (annualized)
+  Current EWMA vol        : 13.44% (annualized)
+
+  Vol distribution (21d rolling, annualized):
+    5th pct  : 6.05%
+    Median   : 12.33%
+    95th pct : 29.23%
+    Max      : 93.67%
+
+-----------------------------------------------------------------
+  [5] DRAWDOWN ANALYSIS
+-----------------------------------------------------------------
+  Max drawdown    : -33.72%
+  Peak date       : 2020-02-19
+  Trough date     : 2020-03-23
+  Duration        : 33 calendar days (peak to trough)
+  Recovery date   : 2020-08-10
+
+-----------------------------------------------------------------
+  [6] DISTRIBUTION DIAGNOSTICS
+-----------------------------------------------------------------
+  Jarque-Bera p-value     : 0.000000
+  Normality rejected      : True
+  Observed tail frequency : 1.38%  (±3 sigma)
+  Gaussian expectation    : 0.27%
+  Tail excess ratio       : 5.1x Gaussian
+
+-----------------------------------------------------------------
+  [7] WORST 10 RETURN DAYS
+-----------------------------------------------------------------
+  Rank   Date           Return      
+  ----   ------------   ----------  
+  1      2020-03-16     -11.5887%
+  2      2020-03-12     -10.0569%
+  3      2020-03-09     -8.1313%
+  4      2025-04-04     -6.0327%
+  5      2020-06-11     -5.9377%
+  6      2020-03-18     -5.1960%
+  7      2025-04-03     -5.0537%
+  8      2020-03-11     -4.9976%
+  9      2020-04-01     -4.6049%
+  10     2020-02-27     -4.5952%
+
+-----------------------------------------------------------------
+  [8] MODEL RISK LIMITATIONS
+-----------------------------------------------------------------
+  1. Historical VaR assumes past distribution = future distribution; fails during regime changes (2020, 2022).
+  2. Gaussian VaR underestimates tail risk; fat tails are 5.1x more frequent than Gaussian.
+  3. Rolling VaR reacts to past events, not future ones (endogenous risk).
+  3. Rolling VaR reacts to past events, not future ones (endogenous risk).
+  4. No volatility clustering model (GARCH) - vol persistence is ignored.
+  5. All metrics assume continuous liquid markets. Energy can gap violently.
+  6. Correlation structure is assumed constant - breaks down in crises.
+  7. VaR says nothing about losses BEYOND the threshold.
+     Always pair with CVaR/Expected Shortfall.
+
+=================================================================
+  END OF REPORT
+=================================================================

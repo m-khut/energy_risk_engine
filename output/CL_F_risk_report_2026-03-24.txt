@@ -1,0 +1,108 @@
+=================================================================
+  ENERGY RISK ENGINE - MARKET RISK REPORT
+=================================================================
+  Ticker    : CL=F
+  Start     : 2015-01-01
+  End       : 2026-03-24
+  Generated : 2026-03-24
+=================================================================
+
+  Observations: 2819 trading days
+  Price range : $-37.63 - $123.70
+
+-----------------------------------------------------------------
+  [1] RETURN STATISTICS
+-----------------------------------------------------------------
+  Mean daily return   : 0.0415%
+  Daily volatility    : 2.8775%
+  Annualized return   : 10.46%
+  Annualized vol      : 45.68%
+  Sharpe ratio        : 0.229  (rf = 0)
+  Skewness            : 0.0548
+  Excess kurtosis     : 21.1748  (0 = normal)
+
+-----------------------------------------------------------------
+  [2] VALUE AT RISK (VaR) AND EXPECTED SHORTFALL (CVaR)
+-----------------------------------------------------------------
+  Historical VaR  95% : -4.0810% per day
+  Historical VaR  99% : -7.5432% per day
+  Parametric VaR  95% : -4.6916% per day
+  Historical CVaR 95% : -6.4931% per day
+  Historical CVaR 99% : -11.3537% per day
+
+  Fat-tail gap (hist - param @ 95%): 0.6106%
+  Interpretation: Fat tails present - Gaussian understates risk.
+
+-----------------------------------------------------------------
+  [3] VAR BACKTEST (KUPIEC TEST, 95%)
+-----------------------------------------------------------------
+  Expected breach rate : 5.0%
+  Observed breach rate : 5.0%
+  Breach count         : 141 / 2819 days
+  LR statistic         : 0.0000
+  p-value              : 0.9966
+  Result               : PASS: Model not rejected. Observed 141 breaches (5.0%) consistent with 5.0% expected.
+
+-----------------------------------------------------------------
+  [4] VOLATILITY ANALYSIS
+-----------------------------------------------------------------
+  Current 21d rolling vol : 93.77% (annualized)
+  Current 63d rolling vol : 60.76% (annualized)
+  Current EWMA vol        : 84.93% (annualized)
+
+  Vol distribution (21d rolling, annualized):
+    5th pct  : 19.37%
+    Median   : 32.45%
+    95th pct : 69.83%
+    Max      : 231.15%
+
+-----------------------------------------------------------------
+  [5] DRAWDOWN ANALYSIS
+-----------------------------------------------------------------
+  Max drawdown    : -149.25%
+  Peak date       : 2018-10-03
+  Trough date     : 2020-04-20
+  Duration        : 565 calendar days (peak to trough)
+  Recovery date   : 2021-10-04
+
+-----------------------------------------------------------------
+  [6] DISTRIBUTION DIAGNOSTICS
+-----------------------------------------------------------------
+  Jarque-Bera p-value     : 0.000000
+  Normality rejected      : True
+  Observed tail frequency : 1.14%  (±3 sigma)
+  Gaussian expectation    : 0.27%
+  Tail excess ratio       : 4.2x Gaussian
+
+-----------------------------------------------------------------
+  [7] WORST 10 RETURN DAYS
+-----------------------------------------------------------------
+  Rank   Date           Return      
+  ----   ------------   ----------  
+  1      2020-03-09     -28.2206%
+  2      2020-04-27     -28.1796%
+  3      2020-03-18     -27.9920%
+  4      2021-11-26     -13.9985%
+  5      2022-03-09     -12.9267%
+  6      2026-03-10     -12.7205%
+  7      2020-03-20     -11.7238%
+  8      2026-03-23     -10.9414%
+  9      2020-04-14     -10.8290%
+  10     2020-03-06     -10.6087%
+
+-----------------------------------------------------------------
+  [8] MODEL RISK LIMITATIONS
+-----------------------------------------------------------------
+  1. Historical VaR assumes past distribution = future distribution; fails during regime changes (2020, 2022).
+  2. Gaussian VaR underestimates tail risk; fat tails are 4.2x more frequent than Gaussian.
+  3. Rolling VaR reacts to past events, not future ones (endogenous risk).
+  3. Rolling VaR reacts to past events, not future ones (endogenous risk).
+  4. No volatility clustering model (GARCH) - vol persistence is ignored.
+  5. All metrics assume continuous liquid markets. Energy can gap violently.
+  6. Correlation structure is assumed constant - breaks down in crises.
+  7. VaR says nothing about losses BEYOND the threshold.
+     Always pair with CVaR/Expected Shortfall.
+
+=================================================================
+  END OF REPORT
+=================================================================
