@@ -26,7 +26,7 @@ def build_report(ticker: str, start: str, end: str = None) -> str:
     # Data loading
 
     add(sep)
-    add(f"  ENERGY RISK ENGINE — MARKET RISK REPORT")
+    add(f"  ENERGY RISK ENGINE - MARKET RISK REPORT")
     add(sep)
     add(f"  Ticker    : {ticker}")
     add(f"  Start     : {start}")
@@ -44,7 +44,7 @@ def build_report(ticker: str, start: str, end: str = None) -> str:
  
     n_obs = len(rets)
     add(f"\n  Observations: {n_obs} trading days")
-    add(f"  Price range : ${prices.min():.2f} — ${prices.max():.2f}")
+    add(f"  Price range : ${prices.min():.2f} - ${prices.max():.2f}")
 
     # Section 1: Return statistics
 
@@ -81,7 +81,7 @@ def build_report(ticker: str, start: str, end: str = None) -> str:
  
     gap = h_var_95['var_threshold'] - p_var_95['var_threshold']
     add(f"\n  Fat-tail gap (hist - param @ 95%): {gap:.4%}")
-    add(f"  Interpretation: {'Fat tails present — Gaussian understates risk.' if abs(gap) > 0.003 else 'Tails close to Gaussian.'}")
+    add(f"  Interpretation: {'Fat tails present - Gaussian understates risk.' if abs(gap) > 0.003 else 'Tails close to Gaussian.'}")
  
     # Section 3: VaR backtest
 
@@ -167,9 +167,9 @@ def build_report(ticker: str, start: str, end: str = None) -> str:
     add(f"  2. Gaussian VaR underestimates tail risk; fat tails are {tails['tail_excess_ratio']:.1f}x more frequent than Gaussian.")
     add("  3. Rolling VaR reacts to past events, not future ones (endogenous risk).")
     add("  3. Rolling VaR reacts to past events, not future ones (endogenous risk).")
-    add("  4. No volatility clustering model (GARCH) — vol persistence is ignored.")
+    add("  4. No volatility clustering model (GARCH) - vol persistence is ignored.")
     add("  5. All metrics assume continuous liquid markets. Energy can gap violently.")
-    add("  6. Correlation structure is assumed constant — breaks down in crises.")
+    add("  6. Correlation structure is assumed constant - breaks down in crises.")
     add("  7. VaR says nothing about losses BEYOND the threshold.")
     add("     Always pair with CVaR/Expected Shortfall.")
  
@@ -183,7 +183,7 @@ def build_report(ticker: str, start: str, end: str = None) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Energy Risk Engine — CLI Market Risk Report Generator"
+        description="Energy Risk Engine - CLI Market Risk Report Generator"
     )
     parser.add_argument(
         "--ticker",
