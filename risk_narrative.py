@@ -254,7 +254,7 @@ axes[0].set_ylabel("Sample quantiles")
 axes[0].legend()
  
 # Rolling kurtosis
-from risk.diagnostics import rolling_kurtosis
+from diagnostics import rolling_kurtosis
 roll_kurt = rolling_kurtosis(rets_log, window=63)
 axes[1].plot(roll_kurt.index, roll_kurt.values, color=COLORS["primary"], linewidth=1.2)
 axes[1].axhline(0, color=COLORS["neutral"], linestyle="--", linewidth=1, label="Normal (0)")
