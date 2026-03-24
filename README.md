@@ -13,7 +13,7 @@ Methodology
 - **EWMA Volatility:** RiskMetrics (1994) standard, λ=0.94. Weights recent returns exponentially.
 
 ## Project Structure
-
+```
 energy-risk-engine/
 ├── data/
 │   └── [[loader.py]]          # yfinance pull, validation, cleaning
@@ -32,7 +32,7 @@ energy-risk-engine/
 ├── outputs/figures/       # publication-quality plots
 ├── [[Mode Risk Memo]]          # model validation memo (SR 11-7 format)
 └── [[requirements.txt]]
-
+```
 
 ## How to Run
 
