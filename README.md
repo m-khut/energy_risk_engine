@@ -32,17 +32,14 @@ energy-risk-engine/
 ## How to Run
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
 # Generate a full risk report for XLE
-python reports/generate_report.py --ticker XLE --start 2018-01-01
+python generate_report.py --ticker XLE --start 2018-01-01
 
 # Save the report to file
-python reports/generate_report.py --ticker CL=F --start 2015-01-01 --save
+python generate_report.py --ticker CL=F --start 2015-01-01 --save
 
 # Run the narrative notebook (Jupyter or as script)
-python notebooks/risk_narrative.py
+python risk_narrative.py
 ```
 
 ## Requirements
