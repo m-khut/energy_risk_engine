@@ -104,3 +104,15 @@ def _check_prices(prices: pd.Series) -> None:
             f"Only {len(prices)} price observations. "
             f"VaR and volatility estimates will be unreliable."
         )
+
+# spy = load_price_data("SPY", "2020-01-01", "2026-03-23")
+# spy_clean = clean_prices(spy)
+# spy_returns = simple_returns(spy_clean)
+# spy_summary = return_summary(spy_returns)
+# print("SPY Return Summary:")
+# for key, value in spy_summary.items():
+#     print(f"  {key}: {value}") 
+
+# spy_worst = worst_days(spy_returns, n=20)
+# print("\nSPY Worst 10 Days:")
+# print(spy_worst)
