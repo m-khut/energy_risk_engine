@@ -4,3 +4,14 @@ Build a production-style risk analytics engine for energy markets that computes 
 
 VaR · CVaR · EWMA Volatility · Drawdown · Diagnostics ·
 Kupiec Backtest · Correlation · CLI Report Generator
+
+**Sequence:**
+  - loader
+  - returns
+  - volatility
+  - VaR
+  - drawdown
+   .
+   .
+   .
+   .
